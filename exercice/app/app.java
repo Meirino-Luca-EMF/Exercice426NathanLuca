@@ -1,14 +1,14 @@
 package exercice.app;
 
-import exercice.app.threads.NombreA;
+import exercice.app.threads.NombreThread;
 
 public class app {
     public static void main(String[] args) {
         
         try {
             // Créer 3 générateurs de nombres aléatoires (entre 1 et 7)
-            NombreA a1 = new NombreA(1, 7);
-            
+            NombreThread a1 = new NombreThread(1, 7);
+
             // Démarrer les générateurs
             a1.start();
 

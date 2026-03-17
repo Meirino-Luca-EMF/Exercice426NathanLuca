@@ -1,14 +1,14 @@
 package exercice.app.threads;
 
-public class NombreA extends Thread {
+public class NombreThread extends Thread {
 
  
     private final int max;
     private final int min;
-    private volatile boolean nombreGenerer;
+    private volatile boolean nombreGenere;
 
-    public NombreA(int min, int max) {
-        this.nombreGenerer = false;
+    public NombreThread(int min, int max) {
+        this.nombreGenere = false;
         this.min = min;
         this.max = max;
         setName("Je suis le générateur pour le premier nombre");
@@ -24,7 +24,7 @@ public class NombreA extends Thread {
 
         dormir(1); // pour simuler que ça prend du temps...
 
-        nombreGenerer = true;
+        nombreGenere = true;
 
         System.out.println("Le générateur pour le premier nombre a terminé");
     }
@@ -39,7 +39,7 @@ public class NombreA extends Thread {
     }
 
     public int getNombre(){
-        if(!nombreGenerer){
+        if(!nombreGenere){
             try {
                 System.out.println(" ==> on va attendre que générateur de nombres ait terminé !");
                 this.join();
