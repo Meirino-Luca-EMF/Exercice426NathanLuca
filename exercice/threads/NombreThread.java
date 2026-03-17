@@ -1,4 +1,4 @@
-package exercice.app.threads;
+package exercice.threads;
 
 public class NombreThread extends Thread {
 
