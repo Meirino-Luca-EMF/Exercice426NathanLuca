@@ -1,4 +1,4 @@
-package app.ctrl;
+package exercice.ctrl;
 
 public class Ctrl {
 
