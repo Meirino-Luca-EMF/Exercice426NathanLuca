@@ -8,7 +8,7 @@ public class app {
         try {
             // Créer 3 générateurs de nombres aléatoires (entre 1 et 7)
             NombreA a1 = new NombreA(1, 7);
-
+            
             // Démarrer les générateurs
             a1.start();
 
