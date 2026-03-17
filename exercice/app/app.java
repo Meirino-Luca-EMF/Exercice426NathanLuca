@@ -12,6 +12,7 @@ public class app {
             NombreThread a1 = new NombreThread(1, 7);
             NombreThread a2 = new NombreThread(1, 7);
             NombreThread a3 = new NombreThread(1, 7);
+            
             // Démarrer les générateurs
             a1.start();
             a2.start();
