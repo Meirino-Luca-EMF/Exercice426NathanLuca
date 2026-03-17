@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import exercice.threads.NombreThread;
 
 public class Ctrl {
-    public void start(){
-    try {
+    public void start() {
+        try {
             // Créer 3 générateurs de nombres aléatoires (entre 1 et 7)
             NombreThread a1 = new NombreThread(1, 7);
             NombreThread a2 = new NombreThread(1, 7);

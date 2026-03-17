@@ -2,7 +2,6 @@ package exercice.threads;
 
 public class NombreThread extends Thread {
 
- 
     private final int max;
     private final int min;
     private volatile boolean nombreGenere;
@@ -15,7 +14,7 @@ public class NombreThread extends Thread {
                 + ")");
     }
 
-    int nombre ;
+    int nombre;
 
     @Override
     public void run() {
@@ -41,8 +40,8 @@ public class NombreThread extends Thread {
         }
     }
 
-    public int getNombre(){
-        if(!nombreGenere){
+    public int getNombre() {
+        if (!nombreGenere) {
             try {
                 System.out.println(" ==> on va attendre que générateur de nombres ait terminé !");
                 this.join();
@@ -52,6 +51,6 @@ public class NombreThread extends Thread {
                 ex.printStackTrace();
             }
         }
-        return nombre ;
+        return nombre;
     }
 }
