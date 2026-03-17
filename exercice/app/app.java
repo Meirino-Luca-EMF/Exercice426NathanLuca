@@ -1,6 +1,6 @@
 package exercice.app;
 
-import exercice.app.threads.NombreThread;
+import exercice.threads.NombreThread;
 
 public class app {
     public static void main(String[] args) {
