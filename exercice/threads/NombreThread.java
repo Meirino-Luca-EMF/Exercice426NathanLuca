@@ -11,14 +11,16 @@ public class NombreThread extends Thread {
         this.nombreGenere = false;
         this.min = min;
         this.max = max;
-        setName("Je suis le générateur pour le premier nombre");
+        setName("Je suis le générateur de nombres aléatoires (" + Integer.toHexString(System.identityHashCode(this))
+                + ")");
     }
 
     int nombre ;
 
     @Override
     public void run() {
-        System.out.println("Le générateur pour le premier nombre a démarré");
+        System.out.println("Le générateur de nombres aléatoires (" + Integer.toHexString(System.identityHashCode(this))
+                + ") a démarré !");
 
         nombre = (int) (Math.random() * (max - min + 1) + min);
 
@@ -26,7 +28,8 @@ public class NombreThread extends Thread {
 
         nombreGenere = true;
 
-        System.out.println("Le générateur pour le premier nombre a terminé");
+        System.out.println("Le générateur de nombres aléatoires (" + Integer.toHexString(System.identityHashCode(this))
+                + ") a terminé !");
     }
 
     public void dormir(int ms) {
